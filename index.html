@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="(min-width:500px)" href="css/home.css">
+    <link rel="stylesheet" media="(max-width:500px)" href="css/mobile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="javascript/home.js"></script>
+    <title>Coding Camp</title>
+</head>
+<body>
+    <div class="center">
+        <img src="assets/logov3.png" id="logo">
+        <div id="spacer-3"></div>
+        <button id="about-me" onclick="clickedWhite()">
+            <img src="assets/face.png" id="face">
+            <p id="about-me-text">About Me</p>
+        </button>
+    </div>
+    <div id="camps" > 
+        <button class="pushable-o" onclick="clickedOrange()">
+            <span class="front-o">
+                <p>Projects</p>
+            </span>
+        </button>    
+        <div id="spacer1"></div> 
+        <button class="pushable-p" onclick="clickedPurple()">
+            <span class="front-p">
+                <p>Socials</p>
+            </span>
+        </button>
+        <div id="spacer1"></div>
+        <button class="pushable-p" onclick="clickedPurple()">
+            <span class="front-p">
+                <p>Socials</p>
+            </span>
+        </button>  
+    </div>
+    <div id="boo-orange"></div>
+    <div id="boo-purple"></div>
+    <div id="boo-white"></div>
+    <div id="content-orange">
+        <button onclick="clickedXOrange()">
+            <img src="assets/x.png" id="x">
+            <button id="info-tab" onclick="clickedInfoOrange()">ABOUT</button>
+            <button id="details-tab" onclick="clickedDetailsOrange()">DETAILS</button>
+            <button id="sign-up" onclick="clickedSignUpOrange()">SIGN UP</button>
+            <div id="signup-content-o">
+                <iframe id="mm-gf" src="https://docs.google.com/forms/d/e/1FAIpQLSdiAHGaaBNXkuE7oHfASGWcAkxZJCKceeOtZwwgOfvOIT9FPw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+            <div id="info-content-o">
+                <p id="mm-info">Learn how to build your own minecraft mods using block coding in this 5 day course</p>
+                <p id="mm-arrow-info">Learn more about the tool we're going to be using, Tynker. We're going to use the block based mod designer to code custom minecraft mods</p>
+                <img id="arrow" src="assets/arrow.png">
+                <iframe id="youtube" width="560" height="315" src="https://www.youtube.com/embed/yhEA_khBpI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>Loading...</iframe>
+                <p id="email-1">If you have any questions, please email me at <a id="link" href="mailto:wjorgensen29@gmail.com">wjorgensen29@gmail.com</a></p>
+            </div>
+            <div id="details-content-o">
+                <p id="details-o">
+                    Price: $150<br><br>
+                    Weeks: July 17th-21st, July 24th-28th<br><br>
+                    Days: Monday-Friday<br><br>
+                    Hours: 10am-3pm<br><br>
+                    Spots Available: 15/15
+                </p>
+                <p id="email">If you have any questions, please email me at <a href="mailto:wjorgensen29@gmail.com">wjorgensen29@gmail.com</a></p>
+            </div>
+        </button>
+    </div>
+    <div id="content-purple">
+        <button onclick="clickedXPurple()">
+            <img src="assets/x.png" id="x">
+            <button id="info-tab" onclick="clickedInfoPurple()">INFO</button>
+            <button id="details-tab" onclick="clickedDetailsPurple()">DETAILS</button>
+            <button id="sign-up" onclick="clickedSignUpPurple()">SIGN UP</button>
+            <div id="signup-content-p">
+                <iframe id="ap-gf" src="https://docs.google.com/forms/d/e/1FAIpQLScU8j2JWIoudo9eIUCIdj6olhTIOoC0R7kO2g7MxdGCJflbRg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+            <div id="info-content-p">
+                <p id="ap-info">Are you taking AP Computer Science or just want to learn Java? 
+                    In this 10 day course I will cover all you need to know to begin
+                    programming in Java and provide an overview of all of the
+                    material covered in AP Computer Science A so that you can 
+                    succeed in the course.</p>
+                    <p id="email-1">If you have any questions, please email me at <a href="mailto:wjorgensen29@gmail.com">wjorgensen29@gmail.com</a></p>
+            </div>
+            <div id="details-content-p">
+                <p id="details-p">
+                    Price: $230<br><br>
+                    Weeks: July 31st-August 11th<br><br>
+                    Days: Monday-Friday<br><br>
+                    Hours: 10am-3pm<br><br>
+                    Spots Available: 20/20
+                </p>
+                <p id="email">If you have any questions, please email me at <a href="mailto:wjorgensen29@gmail.com">wjorgensen29@gmail.com</a></p>
+            </div>
+        </button>
+    </div>
+    <div id="content-white">
+        <button onclick="clickedXWhite()">
+            <img src="assets/x-black.png" id="x-b">
+        </button>
+        <p id="about-me-title">About Me</p>
+        <p id="about-me-content">My name is Wes. I am a freshman at ASU studying Economics and Computer Science. Ive been coding for 5 years and took both AP Computer Science A and Principles while in high school. 
+            I have experience teaching my younger brother programming and that was the inspiration for these camps. 
+            I'm very excited to be able to be able to teach more kids and help them begin programming knowing how useful and impactful it has been for me.</p>
+    </div>
+</body>
+</html>
