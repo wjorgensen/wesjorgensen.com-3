@@ -14,14 +14,14 @@
 </head>
 <body>
     <div class="center">
-        <img src="assets/logov3.png" id="logo">
-        <div id="spacer-3"></div>
+        <img src="assets/logov3.png" id="logo"> 
+    </div>
+    <div id="blocks" > 
         <button id="about-me" onclick="clickedWhite()">
             <img src="assets/face.png" id="face">
             <p id="about-me-text">About Me</p>
         </button>
-    </div>
-    <div id="camps" > 
+        <div id="spacer1"></div>
         <button class="pushable-o" onclick="clickedOrange()">
             <span class="front-o">
                 <p>Projects</p>
@@ -36,7 +36,7 @@
         <div id="spacer1"></div>
         <button class="pushable-p" onclick="clickedPurple()">
             <span class="front-p">
-                <p>Socials</p>
+                <p>Contact Me</p>
             </span>
         </button>  
     </div>
@@ -109,5 +109,10 @@
             I have experience teaching my younger brother programming and that was the inspiration for these camps. 
             I'm very excited to be able to be able to teach more kids and help them begin programming knowing how useful and impactful it has been for me.</p>
     </div>
+    <div class="game-container">
+        <div id="character"></div>
+        <div class="block" onclick="blockHit()"></div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

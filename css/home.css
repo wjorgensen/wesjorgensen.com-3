@@ -15,7 +15,7 @@ button{
     text-shadow: 1px 1px grey;
 }
 
-#camps{
+#blocks{
   padding-top: 12vh;
   display: flex;
   justify-content: center;
@@ -23,14 +23,13 @@ button{
 #logo{
     width: 15vh; 
     height: 15vh;
-    margin-left: 9.5vw;
 }
 .center{
     display: flex;
     justify-content: center;
 }
 #spacer1{
-    width: 19vw;
+    width: 10vw;
 }
 #title-d{
     margin-top: 15vh;
@@ -47,11 +46,10 @@ button{
     padding: 0;
     cursor: pointer;
     outline-offset: 4px;
-    margin-left: 5vw;
   }
   .front-o {
     display: block;
-    padding: 12px 42px;
+    padding: 2vh 1vw;
     border-radius: 12px;
     font-size: 1.25rem;
     background: #ff8400;
@@ -70,7 +68,6 @@ button{
     padding: 0;
     cursor: pointer;
     outline-offset: 4px;
-    margin-right: 5vw;
   }
   .front-p {
     display: block;
