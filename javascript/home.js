@@ -1,150 +1,57 @@
 
-function clickedOrange(){
-    document.getElementById('boo-orange').style.zIndex = 4;
-    document.getElementById('boo-orange').style.backgroundColor = '#ff8400';
-    let id = null;
-    const elem = document.getElementById("boo-orange");
-    elem.style.boxShadow = '8px 8px #cd6a00'
+const contentContainer = document.getElementById('content-container');
+
+document.querySelectorAll('.pushable').forEach(button => {
+    button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        openContent(modalId);
+    });
+});
+
+function openContent(modalId) {
+    contentContainer.style.zIndex = 4;
+    contentContainer.style.backgroundColor = getComputedStyle(document.querySelector(`[data-modal="${modalId}"]`)).backgroundColor;
+    contentContainer.style.boxShadow = '8px 8px ' + darkenColor(contentContainer.style.backgroundColor, 20);
+    animateContentContainer();
+}
+
+document.querySelectorAll('.close-button').forEach(button => {
+    button.addEventListener('click', function() {
+        // Traverse up the DOM to find the parent modal of this close button
+        let parent = this.parentElement;
+        while (!parent.classList.contains('modal-content')) {
+            parent = parent.parentElement;
+        }
+        // Hide the parent modal
+        parent.style.display = 'none';
+    });
+});
+
+function animateContentContainer() {
     let pos = 0;
-    clearInterval(id);
-    id = setInterval(frame, 0.5);
+    const id = setInterval(frame, 0.5);
     function frame() {
-        if (pos == 85) {
-         document.getElementById('content-orange').style.display = 'contents';
-         document.getElementById('info-content-o').style.display = 'contents';
-         document.getElementById('signup-content-o').style.display = 'none';
-         document.getElementById('details-content-o').style.display = 'none';
-         clearInterval(id);
+        if (pos === 85) { 
+            clearInterval(id);
+            // Show the close button after the animation
+            document.querySelectorAll('.close-button').forEach(button => {
+                button.style.display = 'block';
+            });
         } else {
-         pos++; 
-         elem.style.height = pos + 'vh'; 
-         elem.style.width = pos + 'vw';
-         elem.style.left = 50 - (pos*0.5) + 'vw';
-         elem.style.top = 50 - (pos*0.5) + 'vh';
+            pos++;
+            contentContainer.style.height = pos + 'vh';
+            contentContainer.style.width = pos + 'vw';
+            contentContainer.style.left = 50 - (pos * 0.5) + 'vw';
+            contentContainer.style.top = 50 - (pos * 0.5) + 'vh';
+        }
     }
-  }
 }
 
-function clickedXOrange(){
-    const elem = document.getElementById("boo-orange");
-    elem.style.width = 0 + 'vw';
-    elem.style.height = 0 + 'vh';
-    document.getElementById('content-orange').style.display = 'none';
-}
-
-function clickedPurple(){
-    document.getElementById('boo-purple').style.zIndex = 4;
-    document.getElementById('boo-purple').style.backgroundColor = '#cc02f5';
-    let id = null;
-    const elem = document.getElementById("boo-purple");
-    elem.style.boxShadow = '8px 8px #9b00ba'
-    let pos = 0;
-    clearInterval(id);
-    id = setInterval(frame, 0.5);
-    function frame() {
-        if (pos == 85) {
-         document.getElementById('content-purple').style.display = 'contents';
-         document.getElementById('info-content-p').style.display = 'contents';
-         document.getElementById('signup-content-p').style.display = 'none';
-         document.getElementById('details-content-p').style.display = 'none';
-         clearInterval(id);
-        } else {
-         pos++; 
-         elem.style.height = pos + 'vh'; 
-         elem.style.width = pos + 'vw';
-         elem.style.left = 50 - (pos*0.5) + 'vw';
-         elem.style.top = 50 - (pos*0.5) + 'vh';
-    }
-  }
-}
-
-function clickedXPurple(){
-    const elem = document.getElementById("boo-purple");
-    elem.style.width = 0 + 'vw';
-    elem.style.height = 0 + 'vh';
-    document.getElementById('content-purple').style.display = 'none';
-}
-
-function clickedSignUpOrange(){
-    const form = document.getElementById("signup-content-o");
-    const info = document.getElementById("info-content-o");
-    const details = document.getElementById("details-content-o");
-    form.style.display = 'contents';
-    info.style.display = 'none';
-    details.style.display = 'none';
-}
-
-function clickedInfoOrange(){
-    const form = document.getElementById("signup-content-o");
-    const info = document.getElementById("info-content-o");
-    const details = document.getElementById("details-content-o");
-    form.style.display = 'none';
-    info.style.display = 'contents';
-    details.style.display = 'none';
-}
-
-function clickedDetailsOrange(){
-    const form = document.getElementById("signup-content-o");
-    const info = document.getElementById("info-content-o");
-    const details = document.getElementById("details-content-o");
-    form.style.display = 'none';
-    info.style.display = 'none';
-    details.style.display = 'contents';
-}
-
-function clickedSignUpPurple(){
-    const form = document.getElementById("signup-content-p");
-    const info = document.getElementById("info-content-p");
-    const details = document.getElementById("details-content-p");
-    form.style.display = 'contents';
-    info.style.display = 'none';
-    details.style.display = 'none';
-}
-
-function clickedInfoPurple(){
-    const form = document.getElementById("signup-content-p");
-    const info = document.getElementById("info-content-p");
-    const details = document.getElementById("details-content-p");
-    form.style.display = 'none';
-    info.style.display = 'contents';
-    details.style.display = 'none';
-}
-
-function clickedDetailsPurple(){
-    const form = document.getElementById("signup-content-p");
-    const info = document.getElementById("info-content-p");
-    const details = document.getElementById("details-content-p");
-    form.style.display = 'none';
-    info.style.display = 'none';
-    details.style.display = 'contents';
-}
-
-function clickedWhite(){
-    document.getElementById('boo-white').style.zIndex = 4;
-    document.getElementById('boo-white').style.backgroundColor = '#ffffff';
-    let id = null;
-    const elem = document.getElementById("boo-white");
-    elem.style.boxShadow = '8px 8px #b8b8b8';
-    let pos = 0;
-    clearInterval(id);
-    id = setInterval(frame, 0.5);
-    function frame() {
-        if (pos == 85) {
-         document.getElementById('content-white').style.display = 'contents';
-         clearInterval(id);
-        } else {
-         pos++; 
-         elem.style.height = pos + 'vh'; 
-         elem.style.width = pos + 'vw';
-         elem.style.left = 50 - (pos*0.5) + 'vw';
-         elem.style.top = 50 - (pos*0.5) + 'vh';
-    }
-  }
-}
-
-function clickedXWhite(){
-    const elem = document.getElementById("boo-white");
-    elem.style.width = 0 + 'vw';
-    elem.style.height = 0 + 'vh';
-    document.getElementById('content-white').style.display = 'none';
+function darkenColor(color, percent) {
+    const num = parseInt(color.slice(1), 16),
+          amt = Math.round(2.55 * percent),
+          R = (num >> 16) + amt,
+          G = (num >> 8 & 0x00FF) + amt,
+          B = (num & 0x0000FF) + amt;
+    return `#${(0x1000000 + (R < 255 ? R < 1 ? 0 : R : 255) * 0x10000 + (G < 255 ? G < 1 ? 0 : G : 255) * 0x100 + (B < 255 ? B < 1 ? 0 : B : 255)).toString(16).slice(1)}`;
 }
