@@ -39,9 +39,8 @@ function animateContentContainer() {
         let pos = 0;
         const id = setInterval(frame, 0.5);
         function frame() {
-            if (pos === 85) {
+            if (pos >= 85) {
                 clearInterval(id);
-                console.log("done");
                 resolve();
             } else {
                 pos++;
