@@ -1,3 +1,5 @@
+const anime = require('animejs');
+
 document.addEventListener('keydown', function (event) {
     const character = document.getElementById('character');
     const left = parseInt(getComputedStyle(character).left, 10);

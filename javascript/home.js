@@ -1,5 +1,6 @@
-
+const anime = require('animejs');
 const contentContainer = document.getElementById('content-container');
+var buttons = document.querySelectoraAll('.pushable');
 
 document.querySelectorAll('.pushable').forEach(button => {
     button.addEventListener('click', () => {
