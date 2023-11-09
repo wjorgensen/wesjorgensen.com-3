@@ -13,21 +13,18 @@ body {
   font-family: 'Press Start 2P', cursive;
   background-image: url('../assets/background-gif-1.gif');
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#logo {
-  width: 20vh; /* Slightly larger logo */
-  margin-bottom: 5vh;
-}
-
-#blocks {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2vh;
+}
+
+#logo {
+  width: 17vh; /* Slightly larger logo */
+  margin-bottom: 5vh;
+}
+
+
+#blocks {
   width: 80%; /* Adjusted width to prevent overflow */
   max-width: 800px; /* Maximum width to cater for very wide screens */
   padding: 4vh; /* Added padding */
@@ -44,7 +41,6 @@ body {
   padding: 20px; /* Larger buttons */
   margin: 0; /* Remove any margin */
   border-radius: 12px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Drop shadow for depth */
   position: relative; /* This will be used as reference for the absolute positioned ::after */
   overflow: hidden; /* Ensure the shadow doesn't show when the button is not hovered */
   transition: transform 0.2s, box-shadow 0.2s;
@@ -62,14 +58,6 @@ body {
   transition: transform 0.2s; /* Smooths the transition of the shadow */
 }
 
-.pushable:hover::after {
-  transform: translateX(15px); /* Moves the shadow further right on hover */
-}
-
-.pushable:hover {
-  transform: translateY(-5px);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4); /* Enhanced drop shadow on hover */
-}
 
 #content-container {
   display: none;
