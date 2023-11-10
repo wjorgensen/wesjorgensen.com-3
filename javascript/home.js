@@ -1,64 +1,51 @@
-const anime = require('animejs');
 const contentContainer = document.getElementById('content-container');
-var buttons = document.querySelectoraAll('.pushable');
+var buttons = document.querySelectorAll('.pushable');
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.pushable').forEach(button => {
+        button.addEventListener('click', function() {
+            let modalId = this.getAttribute('data-modal');
+            let modal = document.getElementById(modalId);
 
-document.querySelectorAll('.pushable').forEach(button => {
-    button.addEventListener('click', () => {
-        const modalId = button.getAttribute('data-modal');
-        openContent(modalId);
+            anime({
+                targets: modal,
+                width: ['0%', '85%'],  // Starting from 0% to 85% of the viewport width
+                height: ['0%', '85%'], // Starting from 0% to 85% of the viewport height
+                scale: [0, 1],         // Starting from scale 0 to 1
+                opacity: [0, 1],       // Starting from fully transparent to fully opaque
+                easing: 'easeOutExpo',
+                duration: 800,
+                begin: function() {
+                    modal.style.display = 'block';
+                    modal.style.transform = 'translate(-50%, -50%) scale(0)';
+                },
+                update: function(anim) {
+                    let scaleValue = anim.animations[2].currentValue;
+                    modal.style.transform = `translate(-50%, -50%) scale(${scaleValue})`;
+                },
+                complete: function() {
+                    modal.classList.add('active');
+                }
+            });
+        });
+    });
+
+    // Optional: Code to close the modals
+    document.querySelectorAll('.modal-content .close-button').forEach(button => {
+        button.addEventListener('click', function() {
+            let modal = this.closest('.modal-content');
+            anime({
+                targets: modal,
+                width: ['85%', '0%'],  // Reverse animation
+                height: ['85%', '0%'], // Reverse animation
+                scale: [1, 0],
+                opacity: [1, 0],
+                easing: 'easeInExpo',
+                duration: 800,
+                complete: function() {
+                    modal.style.display = 'none';
+                    modal.classList.remove('active');
+                }
+            });
+        });
     });
 });
-
-async function openContent(modalId) {
-    contentContainer.style.zIndex = 4;
-    contentContainer.style.display = 'block';
-    contentContainer.style.backgroundColor = getComputedStyle(document.querySelector(`[data-modal="${modalId}"]`)).backgroundColor;
-    contentContainer.style.boxShadow = '8px 8px ' + darkenColor(contentContainer.style.backgroundColor, 20);
-    document.querySelectorAll('.close-button').forEach(button => {
-        button.style.display = 'none';
-    });
-    await animateContentContainer();
-    displayX();
-}
-
-function displayX() {
-    document.querySelectorAll('.close-button').forEach(button => {
-        button.style.display = 'block';
-    });
-}
-
-document.querySelectorAll('.close-button').forEach(button => {
-    button.addEventListener('click', function() {
-        contentContainer.style.display = 'none';
-        contentContainer.style.height = 0+"vh";
-        contentContainer.style.width = 0+"vw";
-    });
-});
-
-function animateContentContainer() {
-    return new Promise((resolve, reject) => {
-        let pos = 0;
-        const id = setInterval(frame, 0.5);
-        function frame() {
-            if (pos >= 85) {
-                clearInterval(id);
-                resolve();
-            } else {
-                pos++;
-                contentContainer.style.height = pos + 'vh';
-                contentContainer.style.width = pos + 'vw';
-                contentContainer.style.left = 50 - (pos * 0.5) + 'vw';
-                contentContainer.style.top = 50 - (pos * 0.5) + 'vh';
-            }
-        }
-    });
-}
-
-function darkenColor(color, percent) {
-    const num = parseInt(color.slice(1), 16),
-          amt = Math.round(2.55 * percent),
-          R = (num >> 16) + amt,
-          G = (num >> 8 & 0x00FF) + amt,
-          B = (num & 0x0000FF) + amt;
-    return `#${(0x1000000 + (R < 255 ? R < 1 ? 0 : R : 255) * 0x10000 + (G < 255 ? G < 1 ? 0 : G : 255) * 0x100 + (B < 255 ? B < 1 ? 0 : B : 255)).toString(16).slice(1)}`;
-}

@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%; /* Adjusts the height to prevent unnecessary scrolling */
-  overflow: hidden; /* Hides the overflow to remove the scrollbar */
-}
-
 body {
   font-family: 'Press Start 2P', cursive;
   background-image: url('../assets/background-gif-1.gif');
@@ -55,18 +50,12 @@ body {
 
 
 
-
-#content-container {
-  display: none;
-}
-
 #content-container {
   position: fixed;
   width: 0;
   height: 0;
   z-index: 3;
   border-radius: 12px;
-  transition: all 0.5s ease-in-out;
 }
 
 [data-modal="about-me-modal"] { background-color: #ff8400; }
@@ -74,21 +63,35 @@ body {
 [data-modal="socials-modal"] { background-color: red; }
 [data-modal="contact-me-modal"] { background-color: #00ff00; }
 
-a {
-  color: rgb(252, 231, 0);
+.modal-content {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 0;
+  height: 0;
+  z-index: 10;
+  background-color: white; /* or any background color you prefer */
+  padding: 20px; /* adjust as needed */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  overflow: auto;
+  border-radius: 10px;
+}
+
+/* Style when modal is active */
+.modal-content.active {
+  display: block;
+  width: 85vw;  /* 85% of the viewport width */
+  height: 85vh; /* 85% of the viewport height */
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .close-button {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  background: none;
+  top: 10px;
+  right: 10px;
+  background: transparent;
   border: none;
   cursor: pointer;
-  display: none; /* Hide the button initially */
-}
-
-.close-button img {
-  width: 40px; /* Increase the size */
-  height: 40px; /* Increase the size */
 }
