@@ -14,46 +14,44 @@
     <div class="center">
         <img src="assets/logov3.png" id="logo"> 
     </div>
-    <div class="grid-container">
-        <div id="blocks">
-            <button class="pushable" data-modal="about-me-modal">
-                <p>About Me</p>
+    <div class="blocks">
+        <button class="pushable" data-modal="about-me-modal">
+            <p>About Me</p>
+        </button>
+        <button class="pushable" data-modal="projects-modal">
+            <p>Projects</p>
+        </button>    
+        <button class="pushable" data-modal="socials-modal">
+            <p>Socials</p>
+        </button>
+        <button class="pushable" data-modal="contact-me-modal">
+            <p>Contact Me</p>
+        </button>  
+    </div>
+    <div id="content-container">
+        <div id="about-me-modal" class="modal-content">
+            <!-- Your content for the About Me modal -->
+            <button class="close-button">
+                <img src="assets/x-black.png" alt="Close">
             </button>
-            <button class="pushable" data-modal="projects-modal">
-                <p>Projects</p>
-            </button>    
-            <button class="pushable" data-modal="socials-modal">
-                <p>Socials</p>
-            </button>
-            <button class="pushable" data-modal="contact-me-modal">
-                <p>Contact Me</p>
-            </button>  
         </div>
-        <div id="content-container">
-            <div id="about-me-modal" class="modal-content">
-                <!-- Your content for the About Me modal -->
-                <button class="close-button">
-                    <img src="assets/x-black.png" alt="Close">
-                </button>
-            </div>
-            <div id="projects-modal" class="modal-content">
-                <!-- Your content for the Projects modal -->
-                <button class="close-button">
-                    <img src="assets/x-black.png" alt="Close">
-                </button>
-            </div>
-            <div id="socials-modal" class="modal-content">
-                <!-- Your content for the Socials modal -->
-                <button class="close-button">
-                    <img src="assets/x-black.png" alt="Close">
-                </button>
-            </div>
-            <div id="contact-me-modal" class="modal-content">
-                <!-- Your content for the Contact Me modal -->
-                <button class="close-button">
-                    <img src="assets/x-black.png" alt="Close">
-                </button>
-            </div>
+        <div id="projects-modal" class="modal-content">
+            <!-- Your content for the Projects modal -->
+            <button class="close-button">
+                <img src="assets/x-black.png" alt="Close">
+            </button>
+        </div>
+        <div id="socials-modal" class="modal-content">
+            <!-- Your content for the Socials modal -->
+            <button class="close-button">
+                <img src="assets/x-black.png" alt="Close">
+            </button>
+        </div>
+        <div id="contact-me-modal" class="modal-content">
+            <!-- Your content for the Contact Me modal -->
+            <button class="close-button">
+                <img src="assets/x-black.png" alt="Close">
+            </button>
         </div>
     </div>
     <script src="javascript/home.js"></script>
