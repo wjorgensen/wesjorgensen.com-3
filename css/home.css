@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P';
   background-image: url('../assets/background-gif-1.gif');
   background-size: cover;
   display: grid;
@@ -36,19 +36,15 @@ body {
 .pushable {
   background-color: transparent;
   border: none;
-  cursor: pointer;
   font-family: 'Press Start 2P', cursive;
   font-size: 1.2rem;
   color: white;
   padding: 40px; 
   margin: 0; 
   border-radius: 12px;
-  position: relative; /* This will be used as reference for the absolute positioned ::after */
-  overflow: hidden; /* Ensure the shadow doesn't show when the button is not hovered */
-  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative; 
+  overflow: hidden; 
 }
-
-
 
 #content-container {
   position: fixed;
@@ -71,19 +67,17 @@ body {
   transform: translate(-50%, -50%) scale(0);
   width: 0;
   height: 0;
-  z-index: 10;
-  background-color: white; /* or any background color you prefer */
-  padding: 20px; /* adjust as needed */
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 10; 
+  padding: 20px; 
   overflow: auto;
   border-radius: 10px;
 }
 
-/* Style when modal is active */
+
 .modal-content.active {
   display: block;
-  width: 85vw;  /* 85% of the viewport width */
-  height: 85vh; /* 85% of the viewport height */
+  width: 85vw;  
+  height: 85vh; 
   transform: translate(-50%, -50%) scale(1);
 }
 
