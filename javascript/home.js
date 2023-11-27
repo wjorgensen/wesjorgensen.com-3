@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
             anime({
                 targets: modal,
-                width: ['0%', '85%'],  // Starting from 0% to 85% of the viewport width
-                height: ['0%', '85%'], // Starting from 0% to 85% of the viewport height
-                scale: [0, 1],         // Starting from scale 0 to 1
-                opacity: [0, 1],       // Starting from fully transparent to fully opaque
+                width: ['0%', '85%'], 
+                height: ['0%', '85%'], 
+                scale: [0, 1],         
+                opacity: [0, 1],       
                 easing: 'easeOutExpo',
                 duration: 800,
                 begin: function() {
@@ -29,14 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Optional: Code to close the modals
     document.querySelectorAll('.modal-content .close-button').forEach(button => {
         button.addEventListener('click', function() {
             let modal = this.closest('.modal-content');
             anime({
                 targets: modal,
-                width: ['85%', '0%'],  // Reverse animation
-                height: ['85%', '0%'], // Reverse animation
+                width: ['85%', '0%'],  
+                height: ['85%', '0%'], 
                 scale: [1, 0],
                 opacity: [1, 0],
                 easing: 'easeInExpo',
