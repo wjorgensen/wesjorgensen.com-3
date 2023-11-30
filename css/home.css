@@ -158,3 +158,46 @@ body {
   grid-template-rows: repeat(20, 1fr);
   grid-template-columns: repeat(20, 1fr);
 }
+
+.social-button{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  grid-row-start: 10;
+}
+
+#yt-logo{
+  height: 12vw;
+  width: 12vw;
+}
+
+#twt-logo{
+  height: 12vw;
+  width: 12vw;
+}
+
+#gt-logo{
+  height: 12vw;
+  width: 12vw;
+}
+
+#ln-logo{
+  height: 12vw;
+  width: 12vw;
+}
+
+#yt{
+  grid-column-start: 5;
+}
+
+#twt{
+  grid-column-start: 9;
+}
+
+#gt{
+  grid-column-start: 13;
+}
+
+#ln{
+  grid-column-start: 17;
+}
