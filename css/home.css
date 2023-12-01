@@ -62,11 +62,11 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #9c9c9c; /* Adjust shadow color as needed */
+  background-color: #9c9c9c;
   z-index: -1;
-  top: 5%; /* Adjust to control vertical offset */
-  left: 5%; /* Adjust to control horizontal offset */
-  border-radius: 12px; /* Adjust to match button border-radius */
+  top: 5%; 
+  left: 5%;
+  border-radius: 12px;
 }
 
 .button {
@@ -89,6 +89,7 @@ body {
   height: 0;
   z-index: 3;
   border-radius: 12px;
+  color: white;
 }
 
 [data-modal="about-me-modal"] { background-color: #e60012; }
@@ -159,6 +160,7 @@ body {
   grid-template-columns: repeat(20, 1fr);
 }
 
+/*Socials content css*/
 .social-button{
   background: transparent;
   border: none;
@@ -200,4 +202,98 @@ body {
 
 #ln{
   grid-column-start: 17;
+}
+
+#socials-title{
+  font-size: 2.5vw;
+  white-space: nowrap;
+  grid-column: 8 / span 6;
+  grid-row: 2;
+  justify-self: center;
+}
+
+
+/*About me content*/
+
+#head{
+  width: 15vw;
+  height: 18vw;
+  grid-row-start: 5;
+  grid-column: 2 / span 2;
+  justify-self: center;
+  margin-left: 0.5vw;
+}
+
+#ab-title{
+  font-size: 2.5vw;
+  white-space: nowrap;
+  grid-column-start: 8;
+  grid-row-start: 2;
+}
+
+#resume-button{
+  border: none;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  font-size: 3vh;
+  grid-column: 2 / span 2;
+  grid-row: 9 / span 3;
+}
+
+#resume-background{
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#about-me-text{
+  grid-row: 4 / span 15;
+  grid-column: 5 / span 15;
+  font-size: 2.3vh;
+  line-height: 3.1vh;
+}
+
+/*Projects content*/
+
+#p-title{
+  font-size: 2.5vw;
+  white-space: nowrap;
+  grid-column-start: 10;
+  grid-row-start: 1;
+}
+
+#web-dev-button{
+  border: none;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  font-size: 3vh;
+  grid-column: 2 / span 2;
+  grid-row: 9 / span 3;
+}
+
+#blockchain-button{
+  border: none;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  font-size: 3vh;
+  grid-column: 2 / span 2;
+  grid-row: 13 / span 3;
+}
+
+#education-button{
+  border: none;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  font-size: 3vh;
+  grid-column: 2 / span 2;
+  grid-row: 17 / span 3;
 }
