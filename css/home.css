@@ -58,17 +58,6 @@ body {
   margin: 20px;
 }
 
-.shadow {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #9c9c9c;
-  z-index: -1;
-  top: 5%; 
-  left: 5%;
-  border-radius: 12px;
-}
-
 .button {
   position: relative;
   border: none;
@@ -171,25 +160,47 @@ body {
 #yt-logo{
   height: 12vw;
   width: 12vw;
+  transition: transform 0.3s ease;
 }
+
+#yt-logo:hover{
+  transform: scale(1.2);
+}
+
 
 #twt-logo{
   height: 12vw;
   width: 12vw;
+  transition: transform 0.3s ease;
+}
+
+#twt-logo:hover{
+  transform: scale(1.2);
 }
 
 #gt-logo{
   height: 12vw;
   width: 12vw;
+  transition: transform 0.3s ease;
+}
+
+#gt-logo:hover{
+  transform: scale(1.2);
 }
 
 #ln-logo{
   height: 12vw;
   width: 12vw;
+  transition: transform 0.3s ease;
+}
+
+#ln-logo:hover{
+  transform: scale(1.2);
 }
 
 #yt{
   grid-column-start: 5;
+  transition: transform 0.3s ease;
 }
 
 #twt{
@@ -239,6 +250,11 @@ body {
   font-size: 3vh;
   grid-column: 2 / span 2;
   grid-row: 9 / span 3;
+  transition: transform 0.3s ease;
+}
+
+#resume-button:hover{
+  transform: translate(-10px, -10px);
 }
 
 #resume-background{
@@ -320,4 +336,74 @@ body {
   height: 100%;
   border-radius: 50px;
   font-family: "Press Start 2P";
+}
+
+#web-dev-button.active-button,
+#blockchain-button.active-button,
+#education-button.active-button {
+  background-color: white;
+  color: black;
+}
+
+#projects-content{
+  grid-row: 5 / span 16;
+  grid-column: 1 / span 20;
+}
+
+.button-content {
+  display: none;
+}
+
+.active-content{
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+
+
+
+/*Contact Me*/
+
+#c-title{
+  font-size: 2.5vw;
+  white-space: nowrap;
+  grid-column-start: 10;
+  grid-row-start: 1;
+}
+
+#mail-img-link{
+  grid-row: 5 / span 8;
+  grid-column: 7  / span 7;
+  justify-self: center;
+  transition: transform 0.3s ease;
+}
+
+#mail-img-link:hover{
+  transform: translate(-10px, -20px);
+}
+
+
+#mail-img{
+  width: auto;
+  height: 100%;
+}
+
+#copy-email-button{
+  border: none;
+  background-color: white;
+  color: black;
+  font-family: "Press Start 2P";
+  grid-row: 15 / span 2;
+  grid-column: 7 / span 7;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  font-size: 2vw;
+  transition: transform 0.3s ease;
+}
+
+#copy-email-button:hover{
+  transform: translate(-10px, -10px);
 }

@@ -63,9 +63,20 @@
             </button>
             <div id="projects-modal-content">
                 <p id="p-title">PROJECTS</p>
-                <button id="web-dev-button">Web Dev</button>
-                <button id="blockchain-button">Blockchain</button>
-                <button id="education-button">Education</button>
+                <button class="projects-button" id="web-dev-button">Web Dev</button>
+                <button class="projects-button" id="blockchain-button">Blockchain</button>
+                <button class="projects-button" id="education-button">Education</button>
+                <div id="projects-content">
+                    <div class="button-content web-dev-button-content">
+                        <p>web</p>
+                    </div>
+                    <div class="button-content blockchain-button-content" >
+                        <p>block</p>
+                    </div>
+                    <div class="button-content education-button-content">
+                        <p>edu</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="socials-modal" class="modal-content" data-modal="socials-modal">
@@ -95,7 +106,11 @@
                 <img class="close-image" src="assets/x-white.png" alt="Close">
             </button>
             <div id="contact-me-modal-content">
-
+                <p id="c-title">CONTACT ME</p>
+                <a id="mail-img-link" href="mailto:wjorg@bu.edu">
+                    <img id="mail-img" src="assets/mail.png">
+                </a>
+                <button id="copy-email-button"onClick=copyText()>Copy Email</button>
             </div>
         </div>
     </div>

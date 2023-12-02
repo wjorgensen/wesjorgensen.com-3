@@ -56,8 +56,39 @@ document.addEventListener('DOMContentLoaded', function() {
                 complete: function() {
                     modal.style.display = 'none';
                     modal.classList.remove('active');
+                    document.getElementById("copy-email-button").style.backgroundColor = "#FFFFFFFF"
                 }
             });
         });
     });
+
+    const initialActiveButton = document.getElementById('web-dev-button');
+    initialActiveButton.classList.add('active-button');
+    document.getElementsByClassName('web-dev-button-content').item(0).classList.add('active-content');
+
+    function handleButtonClick(event) {
+        document.querySelectorAll('button').forEach(button => {
+            button.classList.remove('active-button');
+        });
+
+        event.target.classList.add('active-button');
+
+        document.querySelectorAll('.button-content').forEach(content => {
+            content.classList.remove('active-content');
+        });
+
+        const contentClass = event.target.id + '-content';
+        document.getElementsByClassName(contentClass)[0].classList.add('active-content');
+    }
+
+    document.querySelectorAll('.projects-button').forEach(button => {
+        button.addEventListener('click', handleButtonClick);
+    });
+
 });
+
+function copyText(){
+    navigator.clipboard.writeText("wjorg@bu.edu");
+    console.log("Copied email to clipboard")
+    document.getElementById("copy-email-button").style.backgroundColor = "#4CAF50";
+}
