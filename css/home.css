@@ -40,6 +40,7 @@ body {
 
 .pushable {
   background-color: transparent;
+  cursor: pointer;
   border: none;
   font-family: 'Press Start 2P';
   font-size: 1.2rem;
@@ -50,26 +51,11 @@ body {
   overflow: hidden; 
   height: 50%;
   margin: 3% 3%;
+  transition: transform 0.3s ease;
 }
 
-.button-container {
-  position: relative;
-  display: inline-block;
-  margin: 20px;
-}
-
-.button {
-  position: relative;
-  border: none;
-  color: white;
-  border-radius: 12px;
-  cursor: pointer;
-  z-index: 1;
-  font-size: 1.2rem;
-  border-radius: 12px;
-  padding: 6vh;
-  width: 100%;
-  height: 100%;
+.pushable:hover{
+  transform: translate(-10px, -10px);
 }
 
 #content-container {
@@ -437,7 +423,7 @@ body {
   width: 100%;
   height: auto;
   margin-top: 6vh;
-  margin-left: 3vw;
+  margin-left: 2vw;
 }
 
 #hestia-description{
@@ -465,14 +451,15 @@ body {
 #DAO-pic{
   width: 70%;
   height: auto;
-  margin-left: 3vw;
+  margin-left: 5vw;
 }
 
 #DAO-description{
   grid-row: 14;
-  grid-column: 2 / span 7;
-  font-size: 1.5vw;
+  grid-column: 1 / span 10;
+  font-size: 2vw;
   text-align: center;
+  margin-left: 3vw;
 }
 
 #movelo-title{
@@ -500,10 +487,74 @@ body {
   grid-column: 10 / span 10;
   justify-self: center;
   width: 90%;
-  font-size: 1.5vw;
+  font-size: 2vw;
   text-align: center;
   margin-left: 7vw;
 }
+
+#one-title{
+  grid-row: 3 / span 4;
+  grid-column: 3 / span 6;
+  font-size: 4vh;
+  text-align: center;
+  line-height: 5vh;
+}
+
+#one-pic-link{
+  grid-row: 8 / span 6;
+  grid-column: 3 / span 5;
+  width: 80%;
+  justify-self: center;
+}
+
+#one-pic{
+  width: 70%;
+  height: auto;
+  margin-left: 3vw;
+}
+
+#one-description{
+  grid-row: 19;
+  grid-column: 1 / span 10;
+  font-size: 1.3vw;
+  text-align: center;
+  margin-top: 6vh;
+  line-height: 3vh;
+}
+
+#cd-yt-title{
+  grid-row: 3 / span 4;
+  grid-column: 11 / span 10;
+  font-size: 4vh;
+  text-align: center;
+  line-height: 5vh;
+}
+
+#cd-yt-pic-link{
+  grid-row: 5 / span 10;
+  grid-column: 14 / span 4;
+  width: 90%;
+  justify-self: center;
+}
+
+#cd-yt-pic{
+  width: auto;
+  height: 100%;
+  margin-top: 10vh;
+  margin-left: 2vw;
+}
+
+#cd-yt-description{
+  grid-row: 19;
+  grid-column: 11 / span 10;
+  justify-self: center;
+  width: 90%;
+  font-size: 1.5vw;
+  text-align: center;
+  margin-top: 6vh;
+}
+
+
 
 /*Contact Me*/
 
