@@ -421,7 +421,7 @@ body {
 
 #hestia-title{
   grid-row: 3 / span 2;
-  grid-column: 15 / span 4;
+  grid-column: 14 / span 7;
   text-align: center;
   line-height: 4.5vh;
 }
@@ -436,19 +436,74 @@ body {
 #hestia-pic{
   width: 100%;
   height: auto;
-  margin-top: 8vh;
-  margin-left: 0.4vw;
+  margin-top: 6vh;
+  margin-left: 3vw;
 }
 
 #hestia-description{
   grid-row: 11 / span 5;
-  grid-column: 14 / span 6;
-  font-size: 3vh;
+  grid-column: 14 / span 7;
+  font-size: 2vh;
   justify-self: center;
   text-align: center;
   line-height: 4vh;
 }
 
+#DAO-title{
+  grid-row: 3 / span 4;
+  grid-column: 4 / span 7;
+  font-size: 5vh;
+}
+
+#DAO-pic-link{
+  grid-row: 9;
+  grid-column: 3 / span 5;
+  width: 80%;
+  justify-self: center;
+}
+
+#DAO-pic{
+  width: 70%;
+  height: auto;
+  margin-left: 3vw;
+}
+
+#DAO-description{
+  grid-row: 14;
+  grid-column: 2 / span 7;
+  font-size: 1.5vw;
+  text-align: center;
+}
+
+#movelo-title{
+  grid-row: 3 / span 4;
+  grid-column: 14 / span 7;
+  font-size: 5vh;
+}
+
+#movelo-pic-link{
+  grid-row: 9;
+  grid-column: 11 / span 9;
+  width: 80%;
+  justify-self: center;
+}
+
+#movelo-pic{
+  width: 100%;
+  height: auto;
+  margin-top: 10vh;
+  margin-left: 2vw;
+}
+
+#movelo-description{
+  grid-row: 14;
+  grid-column: 10 / span 10;
+  justify-self: center;
+  width: 90%;
+  font-size: 1.5vw;
+  text-align: center;
+  margin-left: 7vw;
+}
 
 /*Contact Me*/
 
