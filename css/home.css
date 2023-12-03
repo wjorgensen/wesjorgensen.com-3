@@ -358,10 +358,96 @@ body {
   display: grid;
   width: 100%;
   height: 100%;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
 }
 
+#portfolio-title{
+  grid-row: 3 / span 2;
+  grid-column: 3 / span 4;
+  text-align: center;
+  line-height: 4.5vh;
+}
+
+#portfolio-pic-link{
+  grid-row: 8 ;
+  grid-column: 3 / span 4;
+  width: 80%;
+  justify-self: center;
+}
+
+#portfolio-pic{
+  width: 100%;
+  height: auto;
+}
+
+#portfolio-description{
+  grid-row: 11 / span 5;
+  grid-column: 2 / span 6;
+  font-size: 3vh;
+  justify-self: center;
+  text-align: center;
+  line-height: 4vh;
+}
+
+#funny-game-title{
+  grid-row: 3 / span 2;
+  grid-column: 9 / span 4;
+  text-align: center;
+  line-height: 4.5vh;
+}
+
+#funny-game-pic-link{
+  grid-row: 8;
+  grid-column: 8 / span 6;
+  width: 80%;
+  justify-self: center;
+}
+
+#funny-game-pic{
+  width: 100%;
+  height: auto;
+  margin-top: 2vh;
+}
+
+#funny-game-description{
+  grid-row: 10 / span 5;
+  grid-column: 8 / span 6;
+  font-size: 2vh;
+  justify-self: center;
+  text-align: center;
+  line-height: 4vh;
+}
+
+#hestia-title{
+  grid-row: 3 / span 2;
+  grid-column: 15 / span 4;
+  text-align: center;
+  line-height: 4.5vh;
+}
+
+#hestia-pic-link{
+  grid-row: 8;
+  grid-column: 14 / span 6;
+  width: 80%;
+  justify-self: center;
+}
+
+#hestia-pic{
+  width: 100%;
+  height: auto;
+  margin-top: 8vh;
+  margin-left: 0.4vw;
+}
+
+#hestia-description{
+  grid-row: 11 / span 5;
+  grid-column: 14 / span 6;
+  font-size: 3vh;
+  justify-self: center;
+  text-align: center;
+  line-height: 4vh;
+}
 
 
 /*Contact Me*/
