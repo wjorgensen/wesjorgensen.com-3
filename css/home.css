@@ -43,7 +43,6 @@ body {
   cursor: pointer;
   border: none;
   font-family: 'Press Start 2P';
-  font-size: 1.2rem;
   color: white;
   padding: 6vh;
   border-radius: 12px;
@@ -52,6 +51,10 @@ body {
   height: 50%;
   margin: 3% 3%;
   transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 120%;
 }
 
 .pushable:hover{
@@ -257,8 +260,10 @@ body {
 #about-me-text{
   grid-row: 4 / span 15;
   grid-column: 5 / span 15;
-  font-size: 2.3vh;
+  font-size: 1.3vw;
   line-height: 3.1vh;
+  max-width: 100%;
+  max-height: 90%;
 }
 
 /*Projects content*/
@@ -279,7 +284,7 @@ body {
   border-color: white;
   color: white;
   text-decoration: none;
-  font-size: 3vh;
+  font-size: 120%;
   grid-column: 4 / span 5;
   grid-row: 3 / span 2;
   width: 100%;
@@ -297,7 +302,7 @@ body {
   border-color: white;
   color: white;
   text-decoration: none;
-  font-size: 3vh;
+  font-size: 120%;
   grid-column: 10 / span 1;
   grid-row: 3 / span 2;
   width: 100%;
@@ -315,7 +320,7 @@ body {
   border-color: white;
   color: white;
   text-decoration: none;
-  font-size: 3vh;
+  font-size: 120%;
   grid-column: 12 / span 6;
   grid-row: 3 / span 2;
   width: 100%;
@@ -436,7 +441,7 @@ body {
 }
 
 #DAO-title{
-  grid-row: 3 / span 4;
+  grid-row: 4 / span 4;
   grid-column: 4 / span 7;
   font-size: 5vh;
 }
@@ -452,18 +457,20 @@ body {
   width: 70%;
   height: auto;
   margin-left: 5vw;
+  margin-top: 1vh;
 }
 
 #DAO-description{
-  grid-row: 14;
+  grid-row: 14 / span 4;
   grid-column: 1 / span 10;
   font-size: 2vw;
   text-align: center;
   margin-left: 3vw;
+  line-height: 4vh;
 }
 
 #movelo-title{
-  grid-row: 3 / span 4;
+  grid-row: 4 / span 4;
   grid-column: 14 / span 7;
   font-size: 5vh;
 }
@@ -483,13 +490,14 @@ body {
 }
 
 #movelo-description{
-  grid-row: 14;
+  grid-row: 14 / span 4;
   grid-column: 10 / span 10;
   justify-self: center;
   width: 90%;
   font-size: 2vw;
   text-align: center;
   margin-left: 7vw;
+  line-height: 4vh;
 }
 
 #one-title{
@@ -501,16 +509,16 @@ body {
 }
 
 #one-pic-link{
-  grid-row: 8 / span 6;
+  grid-row: 9 / span 10;
   grid-column: 3 / span 5;
   width: 80%;
   justify-self: center;
 }
 
 #one-pic{
-  width: 70%;
-  height: auto;
-  margin-left: 3vw;
+  width: auto;
+  height: 110%;
+  margin-left: 5vw;
 }
 
 #one-description{
@@ -552,6 +560,7 @@ body {
   font-size: 1.5vw;
   text-align: center;
   margin-top: 6vh;
+  line-height: 3.5vh;
 }
 
 
